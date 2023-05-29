@@ -5,14 +5,7 @@ import java.util.List;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        System.out.println(HasEnoughMana("RRR","2RR"));
-        System.out.println(HasEnoughMana("UUUU","2RU"));
-        System.out.println(HasEnoughMana("GRGRG","3GR"));
-        System.out.println(HasEnoughMana("RRRRRRRRRRRRRRRRRRRR","20"));
-        System.out.println(HasEnoughMana("BB","2"));
-        System.out.println(HasEnoughMana("WBRGU","WBRGU"));
-        System.out.println(HasEnoughMana("C","C"));
-        System.out.println(HasEnoughMana("RRUUGG","3RUG"));
+        /*System.out.println(HasEnoughMana("--TÄHÄN MANAPOOL--","--TÄHÄN MANACOST--"));*/
     }
     static boolean HasEnoughMana(String Manapool, String Manacost){
         List<String> W = new ArrayList<>();
