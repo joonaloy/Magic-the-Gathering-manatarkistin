@@ -1,5 +1,6 @@
 # Magic-the-Gathering-manatarkistin
-Tehtävänanto:
+--------Tehtävänanto--------
+
 Magic the Gatherin (MTG) on maailmankuulu korttipeli. Peliä sinun ei tarvitse ymmärtää, jotta voit tehdä
 tämän tehtävän.
 Jokainen kortti vaatii tietyn määrän manaa.
