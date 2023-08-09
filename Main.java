@@ -48,6 +48,7 @@ public class Main {
                     break;
             }
         }
+        //manacostin lajitteleminen listoihin
         //enaa on boolean joka kertoo onko numeroita enää jäljellä
         boolean enaa = true;
         //throwawaynumia käytetään parseintissä joka testaa onko merkki numero vai kirjain
