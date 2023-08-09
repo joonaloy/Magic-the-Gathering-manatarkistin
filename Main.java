@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 import java.util.List;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
+        //TOIMII AINOSTAAN JOS NUMERO ON ENSIMMÄISENÄ MANACOSTISSA
         /*System.out.println(HasEnoughMana("--TÄHÄN MANAPOOL--","--TÄHÄN MANACOST--"));*/
     }
     static boolean HasEnoughMana(String Manapool, String Manacost){
+        //mana listat
         List<String> W = new ArrayList<>();
         List<String> U = new ArrayList<>();
         List<String> B = new ArrayList<>();
@@ -22,8 +22,9 @@ public class Main {
         List<String> costG = new ArrayList<>();
         List<String> costC = new ArrayList<>();
         int costnum = 0;
-
+        //manapoolin lajitteleminen listoihin
         for (int i = 0; i<Manapool.length();i++){
+            //tempmika on väliaikainen substring joka menee manapool ja manacost stringien läpi
             String tempmika;
             tempmika = Manapool.substring(i,i+1);
             switch (tempmika){
@@ -47,8 +48,11 @@ public class Main {
                     break;
             }
         }
+        //enaa on boolean joka kertoo onko numeroita enää jäljellä
         boolean enaa = true;
+        //throwawaynumia käytetään parseintissä joka testaa onko merkki numero vai kirjain
         int throwawaynum = 0;
+        //jos merkki on numero se lisätään stringinä costnumstringiin joka parseintitään myöhemmin
         String costnumstring = "";
 
         for (int i = 0; i<Manacost.length();i++){
@@ -56,9 +60,11 @@ public class Main {
             tempmika = Manacost.substring(i,i+1);
             if(enaa){
                 try {
+                    //jos parseint onnistuu se lisätään costnumstringiin
                     throwawaynum+=(Integer.parseInt(tempmika));
                     costnumstring = costnumstring+tempmika;
                 } catch (NumberFormatException e){
+                    //jos se epäonnistuu tiedetään että on enää kirjaimia jäljellä
                     enaa = false;
                 }
             }
@@ -84,8 +90,10 @@ public class Main {
             }
         }
         try{
+            //yritetään parsettaa costnumstring
             costnum+=(Integer.parseInt(costnumstring));
         }catch (Exception e){
+            //jos epäonnistuu costnumstring on tyhjä joten costnum on 0
             costnum=0;
         }
 
@@ -101,7 +109,7 @@ public class Main {
         int CostRsize = costR.size();
         int CostGsize = costG.size();
         int CostCsize = costC.size();
-
+        //tarkistetaan onko manapool suurempi kuin manacost
         Wsize-=CostWsize;
         if(Wsize<-1){
             return false;
@@ -121,6 +129,7 @@ public class Main {
         if(Csize<-1){
             return false;
         }
+        //jos on, tarkistetaan onko kaikki loppu manapool suurempi kuin costnum
         int loput = (Wsize+Usize+Bsize+Rsize+Gsize+Csize);
         if(loput>=costnum){
             return true;
