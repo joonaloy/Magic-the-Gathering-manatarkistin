@@ -110,7 +110,7 @@ public class Main {
         int CostRsize = costR.size();
         int CostGsize = costG.size();
         int CostCsize = costC.size();
-        //tarkistetaan onko manapool suurempi kuin manacost
+        //tarkistetaan onko manapoolissa tiettyä manaa enemmän kuin manacostissa samaa tiettyä manaa
         Wsize-=CostWsize;
         if(Wsize<-1){
             return false;
