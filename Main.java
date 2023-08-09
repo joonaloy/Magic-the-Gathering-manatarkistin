@@ -97,7 +97,7 @@ public class Main {
             //jos epäonnistuu costnumstring on tyhjä joten costnum on 0
             costnum=0;
         }
-
+        //listojen koko muutetaan intiksi joten voidaan laskea matikalla
         int Wsize = W.size();
         int Usize = U.size();
         int Bsize = B.size();
