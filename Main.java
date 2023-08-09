@@ -61,7 +61,7 @@ public class Main {
             tempmika = Manacost.substring(i,i+1);
             if(enaa){
                 try {
-                    //jos parseint onnistuu se lisätään costnumstringiin
+                    //jos parseint onnistuu, merkki lisätään costnumstringiin
                     throwawaynum+=(Integer.parseInt(tempmika));
                     costnumstring = costnumstring+tempmika;
                 } catch (NumberFormatException e){
